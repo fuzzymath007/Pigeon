@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57934B57196216F800D8BA2C /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57934B56196216F800D8BA2C /* ContactsTableViewController.m */; };
+		57934B5A1962414A00D8BA2C /* ContactSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57934B591962414A00D8BA2C /* ContactSearchTableViewController.m */; };
 		57AC739E1960FB620079A639 /* editContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AC739D1960FB620079A639 /* editContactsTableViewController.m */; };
 		57C9C00B195A71B500D8D3EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C9C00A195A71B500D8D3EE /* CoreGraphics.framework */; };
 		57C9C00D195A71B500D8D3EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C9C00C195A71B500D8D3EE /* UIKit.framework */; };
@@ -48,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57934B55196216F800D8BA2C /* ContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
+		57934B56196216F800D8BA2C /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
+		57934B581962414A00D8BA2C /* ContactSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactSearchTableViewController.h; sourceTree = "<group>"; };
+		57934B591962414A00D8BA2C /* ContactSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactSearchTableViewController.m; sourceTree = "<group>"; };
 		57AC739C1960FB620079A639 /* editContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editContactsTableViewController.h; sourceTree = "<group>"; };
 		57AC739D1960FB620079A639 /* editContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editContactsTableViewController.m; sourceTree = "<group>"; };
 		57C9C005195A71B500D8D3EE /* Pigeon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pigeon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,8 +171,12 @@
 			isa = PBXGroup;
 			children = (
 				57C9C01A195A71B500D8D3EE /* Main.storyboard */,
+				57934B581962414A00D8BA2C /* ContactSearchTableViewController.h */,
+				57934B591962414A00D8BA2C /* ContactSearchTableViewController.m */,
 				57AC739C1960FB620079A639 /* editContactsTableViewController.h */,
 				57AC739D1960FB620079A639 /* editContactsTableViewController.m */,
+				57934B55196216F800D8BA2C /* ContactsTableViewController.h */,
+				57934B56196216F800D8BA2C /* ContactsTableViewController.m */,
 				57F1DDE4195CE14B00DAEB4F /* LoginViewController.h */,
 				57F1DDE5195CE14B00DAEB4F /* LoginViewController.m */,
 				57F1DDE7195CE16F00DAEB4F /* SignUpViewController.h */,
@@ -309,12 +319,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57934B5A1962414A00D8BA2C /* ContactSearchTableViewController.m in Sources */,
 				57F1DDCE195CCEF600DAEB4F /* InboxTableViewController.m in Sources */,
 				57C9C01F195A71B500D8D3EE /* ViewController.m in Sources */,
 				57AC739E1960FB620079A639 /* editContactsTableViewController.m in Sources */,
 				57F1DDE9195CE16F00DAEB4F /* SignUpViewController.m in Sources */,
 				57C9C019195A71B500D8D3EE /* AppDelegate.m in Sources */,
 				57C9C015195A71B500D8D3EE /* main.m in Sources */,
+				57934B57196216F800D8BA2C /* ContactsTableViewController.m in Sources */,
 				57F1DDE6195CE14B00DAEB4F /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

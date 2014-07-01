@@ -9,13 +9,20 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface editContactsTableViewController : UITableViewController <UISearchBarDelegate>
+@interface editContactsTableViewController : UITableViewController
 
-@property (nonatomic, strong) PFUser *foundContact;
-@property (strong,nonatomic) NSMutableArray *contacts;
+//store ours user's contacts
+@property (strong,nonatomic) NSArray *allContacts;
+
+@property (strong,nonatomic) PFRelation *contactRelation;
+
 @property (nonatomic,strong) PFUser *currentUser;
 
-@property (strong, nonatomic) IBOutlet UISearchBar *searchContacts;
+@property (nonatomic,strong) NSMutableArray *contacts;
+
+
+
+//Method to tell us if the user is a contact so that we can add a check mark
 -(BOOL)isContact:(PFUser *)contact;
 
 @end

@@ -187,19 +187,14 @@
             </objects>
             <point key="canvasLocation" x="218" y="578"/>
         </scene>
-        <!--Edit Contacts Table View Controller - Contacts-->
+        <!--Contacts Table View Controller - Contacts-->
         <scene sceneID="FLh-Hr-yXw">
             <objects>
-                <tableViewController id="xG6-JL-azA" customClass="editContactsTableViewController" sceneMemberID="viewController">
+                <tableViewController id="xG6-JL-azA" customClass="ContactsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FHA-lT-2Ya">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" appearanceType="aqua" contentMode="redraw" id="gdk-2f-7OB">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="yYY-So-2UD">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -213,14 +208,98 @@
                             <outlet property="delegate" destination="xG6-JL-azA" id="6h0-ir-h8U"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Contacts" id="9Mw-tL-dca"/>
-                    <connections>
-                        <outlet property="searchContacts" destination="gdk-2f-7OB" id="BdE-lK-Zel"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Contacts" id="9Mw-tL-dca">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="MyH-G4-bvm">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jsq-NN-Heg">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ohG-Mv-qnX" kind="push" id="e2b-2x-fw4"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="G49-W9-jgb">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8cy-N7-81v">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mhx-If-tSQ" kind="push" id="IH1-9g-5l3"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73M-h0-sO4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1248" y="896"/>
+        </scene>
+        <!--Contact Search Table View Controller - Find a Contact-->
+        <scene sceneID="sKU-hE-MI6">
+            <objects>
+                <tableViewController id="mhx-If-tSQ" customClass="ContactSearchTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Thh-5U-luf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" appearanceType="aqua" contentMode="redraw" placeholder="Type in a code name" id="hZa-Bj-bQc">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="u8Y-ol-IQ7">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u8Y-ol-IQ7" id="VtQ-HJ-yC8">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mhx-If-tSQ" id="g92-jc-Bc7"/>
+                            <outlet property="delegate" destination="mhx-If-tSQ" id="2gp-5V-sbd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Find a Contact" id="HTw-g9-dxO"/>
+                    <connections>
+                        <outlet property="searchContacts" destination="hZa-Bj-bQc" id="AKj-bX-13F"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sal-Rh-Kjf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2002" y="687"/>
+        </scene>
+        <!--Edit Contacts Table View Controller - Edit Friends-->
+        <scene sceneID="Z17-zx-Zdy">
+            <objects>
+                <tableViewController id="ohG-Mv-qnX" customClass="editContactsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tDJ-Vm-qcO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="ss0-W1-PQ1">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ss0-W1-PQ1" id="et5-pt-lqM">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ohG-Mv-qnX" id="pwf-B2-c7W"/>
+                            <outlet property="delegate" destination="ohG-Mv-qnX" id="kgp-3D-Krz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Edit Friends" id="VDt-8S-B6O"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="shS-xo-nTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2002" y="1306"/>
         </scene>
         <!--Navigation Controller - Contacts-->
         <scene sceneID="cik-Dc-CI9">
