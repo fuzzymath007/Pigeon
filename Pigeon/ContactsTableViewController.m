@@ -7,6 +7,7 @@
 //
 
 #import "ContactsTableViewController.h"
+#import "editContactsTableViewController.h"
 
 @interface ContactsTableViewController ()
 
@@ -48,8 +49,13 @@
         }
     }];
     
-    
-    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"showEditContacts"]) {
+        editContactsTableViewController *viewController = (editContactsTableViewController *)segue.destinationViewController;
+        viewController.contacts = [NSMutableArray arrayWithArray:self.contacts];
+    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -10,6 +10,9 @@
 		57934B57196216F800D8BA2C /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57934B56196216F800D8BA2C /* ContactsTableViewController.m */; };
 		57934B5A1962414A00D8BA2C /* ContactSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57934B591962414A00D8BA2C /* ContactSearchTableViewController.m */; };
 		57AC739E1960FB620079A639 /* editContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AC739D1960FB620079A639 /* editContactsTableViewController.m */; };
+		57BABFD919639FF80075117F /* SendMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BABFD819639FF80075117F /* SendMessageTableViewController.m */; };
+		57BABFDB1963A10A0075117F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57BABFDA1963A10A0075117F /* AVFoundation.framework */; };
+		57BABFDD1963A1100075117F /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57BABFDC1963A1100075117F /* AVKit.framework */; };
 		57C9C00B195A71B500D8D3EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C9C00A195A71B500D8D3EE /* CoreGraphics.framework */; };
 		57C9C00D195A71B500D8D3EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C9C00C195A71B500D8D3EE /* UIKit.framework */; };
 		57C9C013195A71B500D8D3EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 57C9C011195A71B500D8D3EE /* InfoPlist.strings */; };
@@ -56,6 +59,10 @@
 		57934B591962414A00D8BA2C /* ContactSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactSearchTableViewController.m; sourceTree = "<group>"; };
 		57AC739C1960FB620079A639 /* editContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editContactsTableViewController.h; sourceTree = "<group>"; };
 		57AC739D1960FB620079A639 /* editContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editContactsTableViewController.m; sourceTree = "<group>"; };
+		57BABFD719639FF80075117F /* SendMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessageTableViewController.h; sourceTree = "<group>"; };
+		57BABFD819639FF80075117F /* SendMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessageTableViewController.m; sourceTree = "<group>"; };
+		57BABFDA1963A10A0075117F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		57BABFDC1963A1100075117F /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		57C9C005195A71B500D8D3EE /* Pigeon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pigeon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C9C008195A71B500D8D3EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		57C9C00A195A71B500D8D3EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -98,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57BABFDD1963A1100075117F /* AVKit.framework in Frameworks */,
+				57BABFDB1963A10A0075117F /* AVFoundation.framework in Frameworks */,
 				57F1DDE3195CDEA100DAEB4F /* Foundation.framework in Frameworks */,
 				57F1DDE2195CDCF900DAEB4F /* SystemConfiguration.framework in Frameworks */,
 				57F1DDE0195CDCF100DAEB4F /* StoreKit.framework in Frameworks */,
@@ -149,6 +158,8 @@
 		57C9C007195A71B500D8D3EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				57BABFDC1963A1100075117F /* AVKit.framework */,
+				57BABFDA1963A10A0075117F /* AVFoundation.framework */,
 				57F1DDE1195CDCF900DAEB4F /* SystemConfiguration.framework */,
 				57F1DDDF195CDCF100DAEB4F /* StoreKit.framework */,
 				57F1DDDD195CDCE900DAEB4F /* Security.framework */,
@@ -177,6 +188,8 @@
 				57AC739D1960FB620079A639 /* editContactsTableViewController.m */,
 				57934B55196216F800D8BA2C /* ContactsTableViewController.h */,
 				57934B56196216F800D8BA2C /* ContactsTableViewController.m */,
+				57BABFD719639FF80075117F /* SendMessageTableViewController.h */,
+				57BABFD819639FF80075117F /* SendMessageTableViewController.m */,
 				57F1DDE4195CE14B00DAEB4F /* LoginViewController.h */,
 				57F1DDE5195CE14B00DAEB4F /* LoginViewController.m */,
 				57F1DDE7195CE16F00DAEB4F /* SignUpViewController.h */,
@@ -323,6 +336,7 @@
 				57F1DDCE195CCEF600DAEB4F /* InboxTableViewController.m in Sources */,
 				57C9C01F195A71B500D8D3EE /* ViewController.m in Sources */,
 				57AC739E1960FB620079A639 /* editContactsTableViewController.m in Sources */,
+				57BABFD919639FF80075117F /* SendMessageTableViewController.m in Sources */,
 				57F1DDE9195CE16F00DAEB4F /* SignUpViewController.m in Sources */,
 				57C9C019195A71B500D8D3EE /* AppDelegate.m in Sources */,
 				57C9C015195A71B500D8D3EE /* main.m in Sources */,

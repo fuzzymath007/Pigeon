@@ -14,8 +14,6 @@
 //store ours user's contacts
 @property (strong,nonatomic) NSArray *allContacts;
 
-@property (strong,nonatomic) PFRelation *contactRelation;
-
 @property (nonatomic,strong) PFUser *currentUser;
 
 @property (nonatomic,strong) NSMutableArray *contacts;
@@ -23,6 +21,6 @@
 
 
 //Method to tell us if the user is a contact so that we can add a check mark
--(BOOL)isContact:(PFUser *)contact;
+-(BOOL)isContact:(PFUser *)user;
 
 @end
