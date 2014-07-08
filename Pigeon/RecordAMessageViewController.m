@@ -28,6 +28,8 @@
 {
     [super viewDidLoad];
     
+    
+    //check if PFFile can be used as the location of the audio file
     PFFile *
     
     
