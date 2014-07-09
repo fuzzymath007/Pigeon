@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import <Parse/Parse.h>
 
 
 @interface SendMessageTableViewController : UITableViewController
 
-
+@property (strong,nonatomic) PFUser *currentUser;
+@property (strong,nonatomic) PFRelation *contactsRelation;
+//This array is our list of contacts returned with objects from our backend
+@property (strong,nonatomic) NSArray *contacts;
 
 
 @end

@@ -330,11 +330,39 @@
                     <navigationItem key="navigationItem" id="XT4-fd-Twl"/>
                     <connections>
                         <outlet property="recordButton" destination="eAv-ix-tgN" id="PDC-5y-neU"/>
+                        <segue destination="OzF-fP-rUp" kind="push" identifier="showContactsForMessage" id="Rjq-nH-lZp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qk-nz-Ym5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1108" y="1556"/>
+        </scene>
+        <!--Send Message Table View Controller-->
+        <scene sceneID="aZV-ov-w6a">
+            <objects>
+                <tableViewController id="OzF-fP-rUp" customClass="SendMessageTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mtZ-YR-jCR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="nSu-VY-TjW">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nSu-VY-TjW" id="aht-Yv-r6N">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OzF-fP-rUp" id="HaV-j5-S0h"/>
+                            <outlet property="delegate" destination="OzF-fP-rUp" id="8Dt-DZ-sti"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="u9s-uz-ehZ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qnf-D9-zpG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1554" y="1550"/>
         </scene>
         <!--Navigation Controller - Contacts-->
         <scene sceneID="cik-Dc-CI9">

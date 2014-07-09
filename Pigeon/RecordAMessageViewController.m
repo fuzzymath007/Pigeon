@@ -56,7 +56,7 @@
         [_audioRecorder prepareToRecord];
         NSLog(@" %@",docsDir);
     }
-
+    
 }
 
 
@@ -94,5 +94,11 @@
     {
         [_audioRecorder stop];
     }
+    
+    [self performSegueWithIdentifier:@"showContactsForMessage" sender:self];
 }
+
+
+
+
 @end
