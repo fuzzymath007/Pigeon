@@ -313,14 +313,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5q3-mM-3wf">
-                                <rect key="frame" x="116" y="263" width="89" height="30"/>
-                                <state key="normal" title="Record">
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAv-ix-tgN">
+                                <rect key="frame" x="105" y="221" width="111" height="84"/>
+                                <color key="backgroundColor" red="0.89331800462259303" green="1" blue="0.00066504108442022591" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="Record:" destination="2La-kg-Swi" eventType="touchDown" id="iN4-hP-ttg"/>
-                                    <action selector="Record:" destination="2La-kg-Swi" eventType="touchUpInside" id="oLM-sO-ceG"/>
+                                    <action selector="recordMessage:" destination="2La-kg-Swi" eventType="touchDown" id="eLi-ES-pti"/>
+                                    <action selector="stopRecording:" destination="2La-kg-Swi" eventType="touchUpInside" id="Ugo-4G-Pz4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -328,7 +329,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XT4-fd-Twl"/>
                     <connections>
-                        <segue destination="aQn-aM-Q40" kind="push" id="Blu-Wr-Y8l"/>
+                        <outlet property="recordButton" destination="eAv-ix-tgN" id="PDC-5y-neU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qk-nz-Ym5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -352,33 +353,6 @@
             </objects>
             <point key="canvasLocation" x="708" y="896"/>
         </scene>
-        <!--Send Message Table View Controller - Send a Message-->
-        <scene sceneID="BSm-6B-0gI">
-            <objects>
-                <tableViewController id="aQn-aM-Q40" customClass="SendMessageTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bCy-RY-Nfb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="y2J-D1-qSp">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y2J-D1-qSp" id="SEg-DA-6to">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="aQn-aM-Q40" id="XAi-Sa-9uC"/>
-                            <outlet property="delegate" destination="aQn-aM-Q40" id="3Kh-uQ-ftb"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Send a Message" id="xEf-dA-iq3"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oAn-b8-qZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1512" y="1564"/>
-        </scene>
         <!--Navigation Controller - Message-->
         <scene sceneID="azg-U2-mgP">
             <objects>
@@ -389,7 +363,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="2La-kg-Swi" kind="push" id="hTM-rM-R8U"/>
+                        <segue destination="2La-kg-Swi" kind="relationship" relationship="rootViewController" id="pEt-8D-2FB"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KLE-wt-kJB" userLabel="First Responder" sceneMemberID="firstResponder"/>

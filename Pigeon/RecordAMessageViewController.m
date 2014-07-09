@@ -15,33 +15,50 @@
 
 @implementation RecordAMessageViewController
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSArray *dirPaths;
+    NSString *docsDir;
     
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    docsDir = dirPaths[0];
     
-    //check if PFFile can be used as the location of the audio file
-    PFFile *
+    NSString *soundFilePath = [docsDir stringByAppendingPathComponent:@"message.caf"];
     
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
     
+    NSDictionary *recordSettings = [NSDictionary
+                                    dictionaryWithObjectsAndKeys:
+                                    [NSNumber numberWithInt:AVAudioQualityMin],
+                                    AVEncoderAudioQualityKey,
+                                    [NSNumber numberWithInt:16],
+                                    AVEncoderBitRateKey,
+                                    [NSNumber numberWithInt: 2],
+                                    AVNumberOfChannelsKey,
+                                    [NSNumber numberWithFloat:44100.0],
+                                    AVSampleRateKey,
+                                    nil];
     
-    _audioRecorder = [[AVAudioRecorder alloc] initWithURL:<#(NSURL *)#> settings:<#(NSDictionary *)#> error:<#(NSError *__autoreleasing *)#>]
+    NSError *error = nil;
+    
+    _audioRecorder = [[AVAudioRecorder alloc]
+                      initWithURL:soundFileURL
+                      settings:recordSettings
+                      error:&error];
+    
+    if (error)
+    {
+        NSLog(@"error: %@", [error localizedDescription]);
+    } else {
+        [_audioRecorder prepareToRecord];
+        NSLog(@" %@",docsDir);
+    }
+
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 /*
 #pragma mark - Navigation
@@ -55,6 +72,27 @@
 */
 
 
-- (IBAction)Record:(id)sender {
+
+-(void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag{}
+-(void)audioRecorderEncodeErrorDidOccur:(AVAudioRecorder *)recorder error:(NSError *)error{
+    NSLog(@"Error: %@", error);
+}
+
+
+- (IBAction)recordMessage:(id)sender {
+    if (!_audioRecorder.recording)
+    {
+        [_audioRecorder record];
+        
+    }
+    
+}
+
+- (IBAction)stopRecording:(id)sender {
+    
+    if (_audioRecorder.recording)
+    {
+        [_audioRecorder stop];
+    }
 }
 @end

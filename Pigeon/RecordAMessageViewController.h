@@ -10,12 +10,16 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Parse/Parse.h>
 
-@interface RecordAMessageViewController : ViewController
+@interface RecordAMessageViewController : ViewController <AVAudioRecorderDelegate, AVAudioPlayerDelegate>
 
 @property (strong,nonatomic) AVAudioRecorder *audioRecorder;
 @property (strong,nonatomic) AVAudioPlayer *audioPlayer;
-@property (strong,nonatomic) IBOutlet UIButton *recordButton;
 
-- (IBAction)Record:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *recordButton;
+
+
+- (IBAction)recordMessage:(id)sender;
+
+- (IBAction)stopRecording:(id)sender;
 
 @end
