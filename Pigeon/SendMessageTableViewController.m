@@ -42,6 +42,7 @@
         }
     }];
     
+    [self.audioPlayer prepareToPlay];
 
 }
 
@@ -55,14 +56,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
     return self.contacts.count;
 }
@@ -77,7 +78,6 @@
     PFUser *user = [self.contacts objectAtIndex:indexPath.row];
     cell.textLabel.text = user.username;
     
-    [self uploadMessage];
     
     return cell;
 }
@@ -121,4 +121,44 @@
 
 
 
+
+
+- (IBAction)previewMessage:(id)sender {
+    
+    NSArray *dirPaths;
+    NSString *docsDir;
+    
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    docsDir = dirPaths[0];
+    
+    NSString *soundFilePath = [docsDir stringByAppendingPathComponent:@"message.caf"];
+    
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    
+    NSError *error;
+    
+    NSLog(@" %@",docsDir);
+    
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    
+    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:&error];
+    
+   [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error: &error];
+    
+    [audioSession setActive:YES error: &error];
+    
+    //play through iphone speakers
+    
+    [audioSession overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error: &error];
+    
+    _audioPlayer.delegate = self;
+    
+    
+    [self.audioPlayer play];
+}
+
+- (IBAction)sendMessageButton:(id)sender {
+    
+    [self uploadMessage];
+}
 @end

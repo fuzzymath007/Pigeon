@@ -8,6 +8,7 @@
 
 #import "InboxTableViewController.h"
 #import <Parse/Parse.h>
+#import "GAIDictionaryBuilder.h"
 
 @interface InboxTableViewController ()
 
@@ -39,7 +40,9 @@ PFUser *currentUser = [PFUser currentUser];
         [self performSegueWithIdentifier:@"showLogin" sender:self];
     }
     
-    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"Inbox"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
     
     
 }
@@ -60,7 +63,7 @@ PFUser *currentUser = [PFUser currentUser];
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
     return 0;
 }

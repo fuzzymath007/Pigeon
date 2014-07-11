@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InboxTableViewController : UITableViewController
+
+@interface InboxTableViewController : UITableViewController 
 - (IBAction)logOut:(id)sender;
 
 

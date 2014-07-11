@@ -11,12 +11,16 @@
 #import <Parse/Parse.h>
 
 
-@interface SendMessageTableViewController : UITableViewController
+@interface SendMessageTableViewController : UITableViewController <AVAudioSessionDelegate, AVAudioPlayerDelegate>
 
 @property (strong,nonatomic) PFUser *currentUser;
 @property (strong,nonatomic) PFRelation *contactsRelation;
 //This array is our list of contacts returned with objects from our backend
 @property (strong,nonatomic) NSArray *contacts;
+@property (strong,nonatomic) AVAudioPlayer *audioPlayer;
 
+- (IBAction)previewMessage:(id)sender;
+
+- (IBAction)sendMessageButton:(id)sender;
 
 @end

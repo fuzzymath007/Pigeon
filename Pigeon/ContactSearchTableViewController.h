@@ -12,8 +12,6 @@
 @interface ContactSearchTableViewController : UITableViewController <UISearchBarDelegate>
 
 
-
-
 @property (nonatomic, strong) PFUser *foundContact;
 @property (strong,nonatomic) NSMutableArray *contacts;
 @property (nonatomic,strong) PFUser *currentUser;
