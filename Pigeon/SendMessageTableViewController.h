@@ -18,6 +18,7 @@
 //This array is our list of contacts returned with objects from our backend
 @property (strong,nonatomic) NSArray *contacts;
 @property (strong,nonatomic) AVAudioPlayer *audioPlayer;
+@property (strong,nonatomic) NSMutableArray *recipients;
 
 - (IBAction)previewMessage:(id)sender;
 

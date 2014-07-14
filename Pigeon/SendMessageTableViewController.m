@@ -42,7 +42,10 @@
         }
     }];
     
+    self.recipients = [[NSMutableArray alloc] init];
+    
     [self.audioPlayer prepareToPlay];
+    
 
 }
 
@@ -69,6 +72,38 @@
 }
 
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    PFUser *user = [self.contacts objectAtIndex:indexPath.row];
+  
+//give checkmarks to contacts selected for message
+    if (cell.accessoryType == UITableViewCellAccessoryNone) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        [self.recipients addObject:user.objectId];
+    }else{
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        [self.recipients removeObject:user.objectId];
+    }
+    
+//prevents the reuse of "cell" when many rows are displayed
+    
+    if ([self.recipients containsObject:user.objectId]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }else{
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
+    
+}
+
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
@@ -76,8 +111,8 @@
     // Configure the cell...
     
     PFUser *user = [self.contacts objectAtIndex:indexPath.row];
-    cell.textLabel.text = user.username;
-    
+
+        cell.textLabel.text = user.username;
     
     return cell;
 }
@@ -96,6 +131,15 @@
     
     NSLog(@"Upload message: %@",file.url);
     
+    if (file == nil) {
+        UIAlertView *noMessageAlert = [[UIAlertView alloc] initWithTitle:@"No Message" message:@"Something has gone wrong. Please record your message again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [noMessageAlert show];
+  //      [self presentViewController:@"RecordAMessageViewController" animated:YES completion:NULL];
+    }
+    
+    
+    
     [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         
         if (error) {
@@ -104,8 +148,14 @@
         else{
             PFObject *message = [PFObject objectWithClassName:@"Messages"];
             [message setObject:file forKey:@"file"];
+            [message setObject:self.recipients forKey:@"Recipients"];
+            [message setObject:[[PFUser currentUser] objectId] forKey:@"senderId"];
+            [message setObject:[[PFUser currentUser] username] forKey:@"senderName"];
             [message saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (error) {
+                    UIAlertView *noMessageSentAlert = [[UIAlertView alloc] initWithTitle:@"No Message" message:@"Something has gone wrong. Please record your message again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    
+                    [noMessageSentAlert show];
                     NSLog(@"%@",error);
                 }else{
                     NSLog(@"sent");
@@ -118,10 +168,6 @@
     
     
 }
-
-
-
-
 
 - (IBAction)previewMessage:(id)sender {
     
@@ -160,5 +206,7 @@
 - (IBAction)sendMessageButton:(id)sender {
     
     [self uploadMessage];
+    
+    //add progress bar
 }
 @end
