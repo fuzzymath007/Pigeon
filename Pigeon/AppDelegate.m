@@ -32,7 +32,19 @@
     id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-52739907-1"];
     
     
+    [self setupAppearance];
+    
+    
     return YES;
+}
+
+-(void)setupAppearance{
+    
+    UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
+    navigationBarAppearance.barTintColor = [UIColor colorWithRed:77/.0/255.0 green:164.0/255.0 blue:191.1/255.0 alpha:1.0f];
+    
+    navigationBarAppearance.tintColor = [UIColor whiteColor];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

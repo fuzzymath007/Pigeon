@@ -10,7 +10,11 @@
 
 
 @interface RecordAMessageViewController ()
+{
+    int recorded_time;
+    NSTimer *timer;
 
+}
 @end
 
 @implementation RecordAMessageViewController
@@ -73,7 +77,10 @@
 
 
 
--(void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag{}
+-(void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag{
+
+}
+
 -(void)audioRecorderEncodeErrorDidOccur:(AVAudioRecorder *)recorder error:(NSError *)error{
     NSLog(@"Error: %@", error);
 }
@@ -83,6 +90,8 @@
     if (!_audioRecorder.recording)
     {
         [_audioRecorder record];
+        
+        
         
     }
     
