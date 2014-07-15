@@ -7,7 +7,7 @@
 //
 
 #import "InboxTableViewController.h"
-#import <Parse/Parse.h>
+#import "playMessageViewController.h"
 #import "GAIDictionaryBuilder.h"
 
 @interface InboxTableViewController ()
@@ -47,6 +47,28 @@ PFUser *currentUser = [PFUser currentUser];
     
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Messages"];
+    [query whereKey:@"Recipients" equalTo:[[PFUser currentUser] objectId]];
+    [query orderByDescending:@"createdAt"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error) {
+            NSLog(@"Error %@ %@", error, error.userInfo);
+        }else{
+            //We got our messages stored in our objects array stroed in our block
+            
+            self.messages = objects;
+            [self.tableView reloadData];
+            NSLog(@"%D",self.messages.count);
+        }
+    }];
+    
+    
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -65,7 +87,7 @@ PFUser *currentUser = [PFUser currentUser];
 {
 
     // Return the number of rows in the section.
-    return 0;
+    return self.messages.count;
 }
 
 
@@ -75,10 +97,35 @@ PFUser *currentUser = [PFUser currentUser];
     
     // Configure the cell...
     
+    self.selectedMessage = [self.messages objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.selectedMessage objectForKey:@"senderName"];
+    
     return cell;
 }
 
-- (IBAction)logOut:(id)sender {
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    PFObject *message = [self.messages objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"playAudioMessage" sender:self];
+
+
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"showLogin"]) {
+        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+    }
+    else if ([segue.identifier isEqualToString:@"playAudioMessage"]) {
+        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+        playMessageViewController *playAMessageViewController = (playMessageViewController *)segue.destinationViewController;
+        playAMessageViewController.message = self.selectedMessage;
+        
+    }
+    
+}
+
+-(IBAction)logOut:(id)sender {
     
     [PFUser logOut];
     [self performSegueWithIdentifier:@"showLogin" sender:self];

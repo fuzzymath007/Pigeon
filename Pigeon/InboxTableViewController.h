@@ -7,10 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <Parse/Parse.h>
 
 
-@interface InboxTableViewController : UITableViewController 
-- (IBAction)logOut:(id)sender;
+@interface InboxTableViewController : UITableViewController
+
+@property (nonatomic,strong) NSArray *messages;
+@property (strong,nonatomic) AVAudioPlayer *audioPlayer;
+@property (strong,nonatomic) PFObject *selectedMessage;
+
+
+
+-(IBAction)logOut:(id)sender;
 
 
 
