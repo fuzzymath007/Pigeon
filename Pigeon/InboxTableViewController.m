@@ -106,24 +106,64 @@ PFUser *currentUser = [PFUser currentUser];
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     PFObject *message = [self.messages objectAtIndex:indexPath.row];
-    [self performSegueWithIdentifier:@"playAudioMessage" sender:self];
+//    [self performSegueWithIdentifier:@"playAudioMessage" sender:self];
+    
+    self.selectedMessage = [self.messages objectAtIndex:indexPath.row];
+    
+    PFFile *audioFile = [message objectForKey:@"file"];
+    NSURL *audioFileURL = [[NSURL alloc] initWithString:audioFile.url];
+    NSData *audioData = [NSData dataWithContentsOfURL:audioFileURL];
+    
+    [audioFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if (error) {
+            NSLog(@"%@",error);
+        }else{
+            NSError *error;
+            
+            AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+            
+            self.audioPlayer = [[AVAudioPlayer alloc] initWithData:data fileTypeHint:AVFileTypeCoreAudioFormat error:&error];
+            
+            //    _audioPlayer = [[AVAudioPlayer alloc] initWithData:data url error:&error];
+            
+            [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error: &error];
+            
+            [audioSession setActive:YES error: &error];
+            
+            //play through iphone speakers
+            
+            [audioSession overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error: &error];
+            
+            _audioPlayer.delegate = self;
+            
+            
+            [self.audioPlayer play];
+            
+            
+            
+        }
+    }progressBlock:^(int percentDone) {
+        NSLog(@"%d", percentDone);
+    }];
+    
 
 
     
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"showLogin"]) {
-        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
-    }
-    else if ([segue.identifier isEqualToString:@"playAudioMessage"]) {
-        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
-        playMessageViewController *playAMessageViewController = (playMessageViewController *)segue.destinationViewController;
-        playAMessageViewController.message = self.selectedMessage;
-        
-    }
     
 }
+
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//    if ([segue.identifier isEqualToString:@"showLogin"]) {
+//        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+//    }
+//    else if ([segue.identifier isEqualToString:@"playAudioMessage"]) {
+//        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+//        playMessageViewController *playAMessageViewController = (playMessageViewController *)segue.destinationViewController;
+//        playAMessageViewController.message = self.selectedMessage;
+//        
+//    }
+//    
+//}
 
 -(IBAction)logOut:(id)sender {
     

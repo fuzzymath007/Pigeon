@@ -36,7 +36,7 @@
         
         [PFUser logInWithUsernameInBackground:codeName password:passWord block:^(PFUser *user, NSError *error) {
             if (error) {
-
+                NSLog(@"%@",error);
             }else{
                 
                 [self.navigationController popToRootViewControllerAnimated:YES];

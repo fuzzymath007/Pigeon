@@ -11,11 +11,13 @@
 #import <Parse/Parse.h>
 
 
-@interface InboxTableViewController : UITableViewController
+@interface InboxTableViewController : UITableViewController <AVAudioSessionDelegate, AVAudioPlayerDelegate>
 
 @property (nonatomic,strong) NSArray *messages;
 @property (strong,nonatomic) AVAudioPlayer *audioPlayer;
 @property (strong,nonatomic) PFObject *selectedMessage;
+
+@property (strong,nonatomic) PFObject *message;
 
 
 

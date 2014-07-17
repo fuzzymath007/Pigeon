@@ -20,36 +20,33 @@
     // Do any additional setup after loading the view.
     
     PFFile *audioFile = [self.message objectForKey:@"file"];
+
+//    NSString *docsDir;
+//    NSArray *dirPaths;
+//    
+//    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    docsDir = [dirPaths objectAtIndex:0];
+//    NSString *databasePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent:@"foo.png"]];
+//    [audioData writeToFile:databasePath atomically:YES];
+
     
-    NSLog(@"%@",audioFile);
+//    NSString *docsDir;
+//    NSArray *dirPaths;
     
-    NSString *docsDir;
-    NSArray *dirPaths;
-    
-    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    docsDir = [dirPaths objectAtIndex:0];
-    NSString *databasePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent:@"recievedMessage.caf"]];
-    NSURL *audioURL = [[NSURL alloc] initWithString:databasePath];
+//    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    docsDir = [dirPaths objectAtIndex:0];
+//    NSString *databasePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent:@"recievedMessage.caf"]];
+//    NSURL *audioURL = [[NSURL alloc] initWithString:databasePath];
     
 
     
-    NSLog(@"%@", audioURL);
+//    NSLog(@"%@", audioURL);
     
-    [audioFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-        if (error) {
-            NSLog(@"%@",error);
-        }else{
-            
-            NSString *docsDir;
-            NSArray *dirPaths;
-            dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-            docsDir = [dirPaths objectAtIndex:0];
-            NSString *databasePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent:@"recievedMessage.caf"]];
-            [data writeToFile:databasePath atomically:YES];
-        }
-    }];
+
     
     //[data writeToURL:(NSURL *) audioURL atomically:YES];
+    
+
     
     
 }
@@ -66,6 +63,42 @@
 
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    PFFile *audioFile = [self.message objectForKey:@"file"];
+    NSURL *audioFileURL = [[NSURL alloc] initWithString:audioFile.url];
+    NSData *audioData = [NSData dataWithContentsOfURL:audioFileURL];
+    
+    [audioFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if (error) {
+            NSLog(@"%@",error);
+        }else{
+            NSError *error;
+            
+            AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+            
+            self.audioPlayer = [[AVAudioPlayer alloc] initWithData:data fileTypeHint:AVFileTypeCoreAudioFormat error:&error];
+            
+        //    _audioPlayer = [[AVAudioPlayer alloc] initWithData:data url error:&error];
+            
+            [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error: &error];
+            
+            [audioSession setActive:YES error: &error];
+            
+            //play through iphone speakers
+            
+            [audioSession overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error: &error];
+            
+            _audioPlayer.delegate = self;
+            
+            
+            [self.audioPlayer play];
+            
+            
+            
+        }
+    }progressBlock:^(int percentDone) {
+        NSLog(@"%d", percentDone);
+    }];
     
 //    NSArray *dirPaths;
 //    NSString *docsDir;
