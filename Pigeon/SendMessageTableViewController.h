@@ -19,6 +19,7 @@
 @property (strong,nonatomic) NSArray *contacts;
 @property (strong,nonatomic) AVAudioPlayer *audioPlayer;
 @property (strong,nonatomic) NSMutableArray *recipients;
+@property NSInteger progressDoneForSendingMessage;
 
 - (IBAction)previewMessage:(id)sender;
 

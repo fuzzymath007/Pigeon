@@ -61,7 +61,6 @@ PFUser *currentUser = [PFUser currentUser];
             
             self.messages = objects;
             [self.tableView reloadData];
-            NSLog(@"%D",self.messages.count);
         }
     }];
     

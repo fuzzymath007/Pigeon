@@ -135,7 +135,6 @@
         UIAlertView *noMessageAlert = [[UIAlertView alloc] initWithTitle:@"No Message" message:@"Something has gone wrong. Please record your message again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         
         [noMessageAlert show];
-  //      [self presentViewController:@"RecordAMessageViewController" animated:YES completion:NULL];
     }
     
     
@@ -159,9 +158,18 @@
                     NSLog(@"%@",error);
                 }else{
                     NSLog(@"sent");
+                    
+                    
                 }
             }];
             
+        }
+    }progressBlock:^(int percentDone) {
+        if (percentDone == 100) {
+            [self.tabBarController  setSelectedIndex:0];
+            [self reset];
+            NSLog(@"sent");
+
         }
     }];
     
@@ -207,6 +215,12 @@
     
     [self uploadMessage];
     
-    //add progress bar
+    
 }
+
+- (void)reset {
+    [self.recipients removeAllObjects];
+}
+
+
 @end

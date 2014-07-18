@@ -87,9 +87,9 @@
 
 
 - (IBAction)recordMessage:(id)sender {
-    if (!_audioRecorder.recording)
+    if (!self.audioRecorder.recording)
     {
-        [_audioRecorder record];
+        [self.audioRecorder record];
         
         
         
@@ -99,9 +99,9 @@
 
 - (IBAction)stopRecording:(id)sender {
     
-    if (_audioRecorder.recording)
+    if (self.audioRecorder.recording)
     {
-        [_audioRecorder stop];
+        [self.audioRecorder stop];
     }
     
     [self performSegueWithIdentifier:@"showContactsForMessage" sender:self];
