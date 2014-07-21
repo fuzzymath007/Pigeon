@@ -167,7 +167,8 @@
     }progressBlock:^(int percentDone) {
         if (percentDone == 100) {
             [self.navigationController popToRootViewControllerAnimated:YES];
-            [self reset];
+       //     [self reset];
+            NSLog(@"%@",self.recipients);
             NSLog(@"sent");
 
         }

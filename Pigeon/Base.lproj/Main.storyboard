@@ -43,39 +43,11 @@
                     </navigationItem>
                     <connections>
                         <segue destination="CEb-dS-NzN" kind="push" identifier="showLogin" id="Xr2-lP-jzB"/>
-                        <segue destination="bzQ-5L-7QZ" kind="push" identifier="playAudioMessage" id="I3p-Ue-bZ9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lNM-Rg-h9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1209" y="138"/>
-        </scene>
-        <!--Play Message View Controller-->
-        <scene sceneID="Lss-Sb-J92">
-            <objects>
-                <viewController id="bzQ-5L-7QZ" customClass="playMessageViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="FDm-P3-5mP"/>
-                        <viewControllerLayoutGuide type="bottom" id="Q3X-bJ-ia3"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dF9-U0-NW6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PTR-zM-SXR">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="jxr-IC-uUr"/>
-                    <connections>
-                        <outlet property="audioView" destination="PTR-zM-SXR" id="XGY-vc-GOY"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aiN-fv-GWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1614" y="-517"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="LQC-2g-57v">

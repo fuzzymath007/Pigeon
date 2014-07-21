@@ -7,7 +7,6 @@
 //
 
 #import "InboxTableViewController.h"
-#import "playMessageViewController.h"
 #import "GAIDictionaryBuilder.h"
 
 @interface InboxTableViewController ()
@@ -31,10 +30,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-PFUser *currentUser = [PFUser currentUser];
+    self.currentUser = [PFUser currentUser];
     
-    if (currentUser) {
-            NSLog(@"Current User is %@",currentUser);
+    if (self.currentUser) {
+            NSLog(@"Current User is %@",self.currentUser);
         [self.navigationController popToRootViewControllerAnimated:YES];
     }else{
         [self performSegueWithIdentifier:@"showLogin" sender:self];
@@ -137,6 +136,17 @@ PFUser *currentUser = [PFUser currentUser];
             
             
             [self.audioPlayer play];
+            
+            NSMutableArray *recipientsInMeaages = [NSMutableArray arrayWithArray:[self.selectedMessage objectForKey:@"Recipients"]];
+            NSLog(@"%@",recipientsInMeaages);
+            
+            if ([recipientsInMeaages count] == 1) {
+                [self.selectedMessage deleteInBackground];
+            }else{
+                [recipientsInMeaages removeObject:[[PFUser currentUser] objectId]];
+                [self.selectedMessage setObject:recipientsInMeaages forKey:@"recipientIds"];
+                [self.selectedMessage saveInBackground];
+            }
             
             
             

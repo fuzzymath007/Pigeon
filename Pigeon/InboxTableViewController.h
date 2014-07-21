@@ -16,7 +16,7 @@
 @property (nonatomic,strong) NSArray *messages;
 @property (strong,nonatomic) AVAudioPlayer *audioPlayer;
 @property (strong,nonatomic) PFObject *selectedMessage;
-
+@property (strong,nonatomic) PFUser *currentUser;
 @property (strong,nonatomic) PFObject *message;
 
 
