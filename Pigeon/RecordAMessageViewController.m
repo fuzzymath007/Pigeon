@@ -104,7 +104,7 @@
         [self.audioRecorder stop];
     }
     
-    [self performSegueWithIdentifier:@"showContactsForMessage" sender:self];
+    [self performSegueWithIdentifier:@"showContactsForMessage" sender:sender];
 }
 
 

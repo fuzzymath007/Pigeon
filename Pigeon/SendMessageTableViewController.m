@@ -166,7 +166,7 @@
         }
     }progressBlock:^(int percentDone) {
         if (percentDone == 100) {
-            [self.tabBarController  setSelectedIndex:0];
+            [self.navigationController popToRootViewControllerAnimated:YES];
             [self reset];
             NSLog(@"sent");
 
