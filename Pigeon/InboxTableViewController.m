@@ -30,6 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
     self.currentUser = [PFUser currentUser];
     
     if (self.currentUser) {
@@ -48,6 +50,8 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    [self.navigationController.navigationBar setHidden:NO];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Messages"];
     [query whereKey:@"Recipients" equalTo:[[PFUser currentUser] objectId]];

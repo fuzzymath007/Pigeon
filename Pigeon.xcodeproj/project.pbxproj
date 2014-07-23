@@ -43,6 +43,16 @@
 		57F1DDE3195CDEA100DAEB4F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C9C008195A71B500D8D3EE /* Foundation.framework */; };
 		57F1DDE6195CE14B00DAEB4F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F1DDE5195CE14B00DAEB4F /* LoginViewController.m */; };
 		57F1DDE9195CE16F00DAEB4F /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F1DDE8195CE16F00DAEB4F /* SignUpViewController.m */; };
+		57FF7B79197F2FBD00655F69 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FF7B71197F2FBD00655F69 /* Icon-60.png */; };
+		57FF7B7A197F2FBD00655F69 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FF7B72197F2FBD00655F69 /* Icon-60@2x.png */; };
+		57FF7B7B197F2FBD00655F69 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FF7B73197F2FBD00655F69 /* Icon-76.png */; };
+		57FF7B7C197F2FBD00655F69 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FF7B74197F2FBD00655F69 /* Icon-76@2x.png */; };
+		57FF7B7D197F2FBD00655F69 /* Icon-Small-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FF7B75197F2FBD00655F69 /* Icon-Small-40.png */; };
+		57FF7B7E197F2FBD00655F69 /* Icon-Small-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FF7B76197F2FBD00655F69 /* Icon-Small-40@2x.png */; };
+		57FF7B7F197F2FBD00655F69 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FF7B77197F2FBD00655F69 /* Icon-Small.png */; };
+		57FF7B80197F2FBD00655F69 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FF7B78197F2FBD00655F69 /* Icon-Small@2x.png */; };
+		57FF7B87197F325D00655F69 /* 1136_piegon_launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FF7B85197F325D00655F69 /* 1136_piegon_launch.png */; };
+		57FF7B89197F32A400655F69 /* 960_piegon_launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FF7B88197F32A400655F69 /* 960_piegon_launch.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +126,16 @@
 		57F1DDE5195CE14B00DAEB4F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		57F1DDE7195CE16F00DAEB4F /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		57F1DDE8195CE16F00DAEB4F /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		57FF7B71197F2FBD00655F69 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		57FF7B72197F2FBD00655F69 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		57FF7B73197F2FBD00655F69 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		57FF7B74197F2FBD00655F69 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		57FF7B75197F2FBD00655F69 /* Icon-Small-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40.png"; sourceTree = "<group>"; };
+		57FF7B76197F2FBD00655F69 /* Icon-Small-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@2x.png"; sourceTree = "<group>"; };
+		57FF7B77197F2FBD00655F69 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		57FF7B78197F2FBD00655F69 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		57FF7B85197F325D00655F69 /* 1136_piegon_launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1136_piegon_launch.png; sourceTree = "<group>"; };
+		57FF7B88197F32A400655F69 /* 960_piegon_launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 960_piegon_launch.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +222,7 @@
 		57C9C00E195A71B500D8D3EE /* Pigeon */ = {
 			isa = PBXGroup;
 			children = (
+				57FF7B81197F300000655F69 /* Images */,
 				57642319196F8AB30004F992 /* libAdIdAccess.a */,
 				5764231A196F8AB30004F992 /* libGoogleAnalyticsServices.a */,
 				57C9C01A195A71B500D8D3EE /* Main.storyboard */,
@@ -268,6 +289,23 @@
 				57C9C030195A71B500D8D3EE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		57FF7B81197F300000655F69 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				57FF7B88197F32A400655F69 /* 960_piegon_launch.png */,
+				57FF7B85197F325D00655F69 /* 1136_piegon_launch.png */,
+				57FF7B71197F2FBD00655F69 /* Icon-60.png */,
+				57FF7B72197F2FBD00655F69 /* Icon-60@2x.png */,
+				57FF7B73197F2FBD00655F69 /* Icon-76.png */,
+				57FF7B74197F2FBD00655F69 /* Icon-76@2x.png */,
+				57FF7B75197F2FBD00655F69 /* Icon-Small-40.png */,
+				57FF7B76197F2FBD00655F69 /* Icon-Small-40@2x.png */,
+				57FF7B77197F2FBD00655F69 /* Icon-Small.png */,
+				57FF7B78197F2FBD00655F69 /* Icon-Small@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,7 +384,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57FF7B7C197F2FBD00655F69 /* Icon-76@2x.png in Resources */,
+				57FF7B7D197F2FBD00655F69 /* Icon-Small-40.png in Resources */,
+				57FF7B7B197F2FBD00655F69 /* Icon-76.png in Resources */,
 				57C9C021195A71B500D8D3EE /* Images.xcassets in Resources */,
+				57FF7B87197F325D00655F69 /* 1136_piegon_launch.png in Resources */,
+				57FF7B80197F2FBD00655F69 /* Icon-Small@2x.png in Resources */,
+				57FF7B7E197F2FBD00655F69 /* Icon-Small-40@2x.png in Resources */,
+				57FF7B89197F32A400655F69 /* 960_piegon_launch.png in Resources */,
+				57FF7B79197F2FBD00655F69 /* Icon-60.png in Resources */,
+				57FF7B7A197F2FBD00655F69 /* Icon-60@2x.png in Resources */,
+				57FF7B7F197F2FBD00655F69 /* Icon-Small.png in Resources */,
 				57C9C013195A71B500D8D3EE /* InfoPlist.strings in Resources */,
 				57C9C01C195A71B500D8D3EE /* Main.storyboard in Resources */,
 			);
@@ -500,8 +548,6 @@
 		57C9C038195A71B500D8D3EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -521,8 +567,6 @@
 		57C9C039195A71B500D8D3EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
