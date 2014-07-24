@@ -31,7 +31,6 @@
 {
     [super viewDidLoad];
     
-    
     self.currentUser = [PFUser currentUser];
     
     if (self.currentUser) {
@@ -41,15 +40,14 @@
         [self performSegueWithIdentifier:@"showLogin" sender:self];
     }
     
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker set:kGAIScreenName value:@"Inbox"];
-    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
-    
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"Inbox"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
     
     [self.navigationController.navigationBar setHidden:NO];
     
@@ -66,9 +64,7 @@
             [self.tableView reloadData];
         }
     }];
-    
-    
-    
+
 }
 
 - (void)didReceiveMemoryWarning

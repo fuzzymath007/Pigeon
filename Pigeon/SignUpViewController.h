@@ -15,6 +15,7 @@
 
 
 - (IBAction)submit:(id)sender;
+- (IBAction)backToLogIn:(id)sender;
 
 
 @end

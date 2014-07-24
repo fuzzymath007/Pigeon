@@ -7,6 +7,7 @@
 //
 
 #import "editContactsTableViewController.h"
+#import "GAIDictionaryBuilder.h"
 
 
 @interface editContactsTableViewController ()
@@ -19,6 +20,8 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
    // self.contactRelation = [[PFUser currentUser] objectForKey:@"contactRelation"];
+    
+    
     
     PFQuery *query = [PFUser query];
     
@@ -33,6 +36,16 @@
     }];
     
     self.currentUser = [PFUser currentUser];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"Edit Contacts"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+    
+    
 }
 
 
@@ -59,23 +72,11 @@
     
     PFUser *user = [self.allContacts objectAtIndex:indexPath.row];
     cell.textLabel.text = user.username;
- 
-    /*
-    for (PFUser *contact in self.contacts) {
-        if ([contact.objectId isEqualToString:user.objectId]) {
-            cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        }else{
-            NSLog(@"NO");
-        }
-    }
-    
-    */
-
 
     if ([self isContact:user]) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        cell.imageView.image = [UIImage imageNamed:@"remove_user-32.png"];
     }else{
-        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.imageView.image = [UIImage imageNamed:@"add_user-32.png"];
     }
 
     return cell;

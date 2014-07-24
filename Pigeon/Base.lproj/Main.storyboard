@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A283o" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ox1-5V-5Fq">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -61,28 +62,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kgh-Nk-Yp9">
-                                <rect key="frame" x="45" y="174" width="225" height="30"/>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kgh-Nk-Yp9">
+                                <rect key="frame" x="31" y="201" width="253" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqK-eM-tfP">
-                                <rect key="frame" x="97" y="231" width="107" height="30"/>
+                                <rect key="frame" x="104" y="268" width="107" height="30"/>
+                                <color key="backgroundColor" red="0.52941176470588236" green="0.68235294117647061" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="submitLogin:" destination="CEb-dS-NzN" eventType="touchUpInside" id="8A9-bT-gdt"/>
                                 </connections>
                             </button>
-                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="code name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UYl-Mn-Wpr">
-                                <rect key="frame" x="45" y="114" width="225" height="30"/>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="code name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UYl-Mn-Wpr">
+                                <rect key="frame" x="31" y="145" width="253" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPb-jp-Bds">
-                                <rect key="frame" x="99" y="290" width="105" height="30"/>
+                                <rect key="frame" x="84" y="306" width="147" height="30"/>
+                                <color key="backgroundColor" red="0.52941176470588236" green="0.68235294117647061" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Make Account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -90,16 +99,20 @@
                                 </connections>
                             </button>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFy-Mj-FGC">
-                                <rect key="frame" x="85" y="342" width="151" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="57" y="344" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.52941176470588236" green="0.68235294117647061" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Forgot Password?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.83529411764705885" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="BrW-k9-jSG"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="codeName" destination="UYl-Mn-Wpr" id="l1C-G7-2Lz"/>
                         <outlet property="passWord" destination="Kgh-Nk-Yp9" id="Etq-Hi-8im"/>
@@ -121,39 +134,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hcO-GN-qtm">
-                                <rect key="frame" x="18" y="115" width="275" height="30"/>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hcO-GN-qtm">
+                                <rect key="frame" x="18" y="137" width="275" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="code name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GA2-WS-nOs">
-                                <rect key="frame" x="18" y="153" width="275" height="30"/>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="code name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GA2-WS-nOs">
+                                <rect key="frame" x="15" y="196" width="275" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoZ-zJ-q4E">
-                                <rect key="frame" x="110" y="285" width="93" height="30"/>
+                                <rect key="frame" x="114" y="302" width="93" height="30"/>
+                                <color key="backgroundColor" red="0.52941176470588236" green="0.68235294117647061" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="submit:" destination="CDt-3o-uyI" eventType="touchUpInside" id="qdy-YI-PsT"/>
                                 </connections>
                             </button>
-                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4XE-3v-0N2">
-                                <rect key="frame" x="18" y="202" width="268" height="30"/>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4XE-3v-0N2">
+                                <rect key="frame" x="18" y="247" width="268" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emg-BZ-eCy">
-                                <rect key="frame" x="13" y="71" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back">
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXV-JL-Sh2">
+                                <rect key="frame" x="15" y="20" width="38" height="38"/>
+                                <state key="normal" image="cancel-75.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backToLogIn:" destination="CDt-3o-uyI" eventType="touchUpInside" id="t2s-cQ-PQQ"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.83529411764705885" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="ob2-uj-m5W"/>
                     <connections>
@@ -164,13 +185,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T6E-Cw-gaA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2070" y="138"/>
+            <point key="canvasLocation" x="2071" y="138"/>
         </scene>
         <!--Navigation Controller - Inbox-->
         <scene sceneID="FLl-lS-XwS">
             <objects>
                 <navigationController title="Inbox" id="7dt-Pg-YiK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Inbox" id="R85-WH-Z9F"/>
+                    <tabBarItem key="tabBarItem" title="Inbox" image="listen-32.png" id="R85-WH-Z9F"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OLS-Xv-uLj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -211,6 +232,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.85882352941176465" green="0.83529411764705885" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="yYY-So-2UD">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
@@ -228,10 +250,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Contacts" id="9Mw-tL-dca">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="MyH-G4-bvm">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jsq-NN-Heg">
-                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Jsq-NN-Heg">
+                                <rect key="frame" x="16" y="6" width="64" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Edit">
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="Edit" image="edit_user-32.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -240,10 +263,11 @@
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="G49-W9-jgb">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8cy-N7-81v">
-                                <rect key="frame" x="233" y="7" width="71" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="8cy-N7-81v">
+                                <rect key="frame" x="215" y="6" width="89" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Search">
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="Search" image="find_user-32.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -264,7 +288,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Thh-5U-luf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.83529411764705885" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
                         <searchBar key="tableHeaderView" appearanceType="aqua" contentMode="redraw" placeholder="Type in a code name" id="hZa-Bj-bQc">
                             <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -335,10 +359,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAv-ix-tgN">
-                                <rect key="frame" x="77" y="242" width="147" height="84"/>
-                                <color key="backgroundColor" red="0.89331800459999999" green="1" blue="0.00066504108440000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Record Sound">
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAv-ix-tgN">
+                                <rect key="frame" x="75" y="128" width="171" height="177"/>
+                                <state key="normal" title="Record Sound" image="micro-256.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" title="Recording"/>
@@ -347,8 +370,15 @@
                                     <action selector="stopRecording:" destination="2La-kg-Swi" eventType="touchUpInside" id="Ugo-4G-Pz4"/>
                                 </connections>
                             </button>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press and Hold to Record" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdT-f2-NHn">
+                                <rect key="frame" x="16" y="313" width="289" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.83529411764705885" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="XT4-fd-Twl"/>
                     <connections>
@@ -367,7 +397,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mtZ-YR-jCR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.82745098039215681" green="0.80000000000000004" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="nSu-VY-TjW">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
@@ -376,6 +406,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.82745098039215681" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -386,9 +417,12 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="u9s-uz-ehZ">
                         <nil key="title"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OHj-R4-bFf">
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="OHj-R4-bFf">
                             <rect key="frame" x="96" y="7" width="128" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" none="YES" button="YES" playsSound="YES"/>
+                            </accessibility>
                             <state key="normal" title="Preview Message">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -396,7 +430,7 @@
                                 <action selector="previewMessage:" destination="OzF-fP-rUp" eventType="touchUpInside" id="RD9-6C-qa2"/>
                             </connections>
                         </button>
-                        <barButtonItem key="rightBarButtonItem" title="Send" id="trD-nO-46B">
+                        <barButtonItem key="rightBarButtonItem" image="upload_to_cloud-32.png" id="trD-nO-46B">
                             <connections>
                                 <action selector="sendMessageButton:" destination="OzF-fP-rUp" id="jSj-pi-1fb"/>
                             </connections>
@@ -412,7 +446,7 @@
         <scene sceneID="cik-Dc-CI9">
             <objects>
                 <navigationController title="Contacts" id="Ccd-Np-Dqz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Contacts" id="ss9-Q7-wXc"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="group-32.png" id="ss9-Q7-wXc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N4V-ol-2Dq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -429,7 +463,7 @@
         <scene sceneID="azg-U2-mgP">
             <objects>
                 <navigationController title="Message" id="Hrk-B4-Roc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Message" id="WSW-w2-POu"/>
+                    <tabBarItem key="tabBarItem" title="Message" image="megaphone-32.png" id="WSW-w2-POu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wt5-Sa-Jet">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -443,6 +477,16 @@
             <point key="canvasLocation" x="694" y="1828"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cancel-75.png" width="75" height="75"/>
+        <image name="edit_user-32.png" width="32" height="32"/>
+        <image name="find_user-32.png" width="32" height="32"/>
+        <image name="group-32.png" width="32" height="32"/>
+        <image name="listen-32.png" width="32" height="32"/>
+        <image name="megaphone-32.png" width="32" height="32"/>
+        <image name="micro-256.png" width="256" height="256"/>
+        <image name="upload_to_cloud-32.png" width="32" height="32"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

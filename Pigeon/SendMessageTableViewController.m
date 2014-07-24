@@ -7,6 +7,7 @@
 //
 
 #import "SendMessageTableViewController.h"
+#import "GAIDictionaryBuilder.h"
 
 @interface SendMessageTableViewController ()
 
@@ -48,6 +49,17 @@
     
 
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"SendAMessage"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {

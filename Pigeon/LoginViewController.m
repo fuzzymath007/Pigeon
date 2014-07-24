@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import <Parse/Parse.h>
+#import "GAIDictionaryBuilder.h"
 
 @interface LoginViewController ()
 
@@ -20,10 +21,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"Login"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
     
     [self.navigationController.navigationBar setHidden:YES];
 }

@@ -8,6 +8,7 @@
 
 #import "SignUpViewController.h"
 #import <Parse/Parse.h>
+#import "GAIDictionaryBuilder.h"
 
 @interface SignUpViewController ()
 
@@ -22,6 +23,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"SignUp"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+    
 }
 
 
@@ -56,6 +67,11 @@
     }
     
     
+}
+
+- (IBAction)backToLogIn:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

@@ -7,6 +7,7 @@
 //
 
 #import "RecordAMessageViewController.h"
+#import "GAIDictionaryBuilder.h"
 
 
 @interface RecordAMessageViewController ()
@@ -24,6 +25,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+
+    
     NSArray *dirPaths;
     NSString *docsDir;
     
@@ -60,6 +64,16 @@
         [_audioRecorder prepareToRecord];
         NSLog(@" %@",docsDir);
     }
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"Record Message"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+    
     
 }
 

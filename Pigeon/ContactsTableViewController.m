@@ -8,6 +8,7 @@
 
 #import "ContactsTableViewController.h"
 #import "editContactsTableViewController.h"
+#import "GAIDictionaryBuilder.h"
 
 @interface ContactsTableViewController ()
 
@@ -27,12 +28,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"Contacts"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
     
     //In edit contacts I set the contactRealtion key for the database
     self.contactsRelation = [[PFUser currentUser] objectForKey:@"contactRelation"];

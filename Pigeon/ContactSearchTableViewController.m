@@ -7,6 +7,7 @@
 //
 
 #import "ContactSearchTableViewController.h"
+#import "GAIDictionaryBuilder.h"
 
 @interface ContactSearchTableViewController ()
 
@@ -30,6 +31,16 @@
     
     self.searchContacts.delegate = self;
     self.currentUser = [PFUser currentUser];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"Contacts List"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+    
+    
 }
 
 
