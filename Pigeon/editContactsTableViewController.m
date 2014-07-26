@@ -23,7 +23,12 @@
     
     
     
-    PFQuery *query = [PFUser query];
+    
+    //In edit contacts I set the contactRealtion key for the database
+    self.contactsRelation = [[PFUser currentUser] objectForKey:@"contactRelation"];
+    
+    //Call to the backend to get our array of contacts
+    PFQuery *query = [self.contactsRelation query];
     
     [query orderByAscending:@"username"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {

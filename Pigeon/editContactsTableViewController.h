@@ -18,6 +18,8 @@
 
 @property (nonatomic,strong) NSMutableArray *contacts;
 
+@property (strong,nonatomic) PFRelation *contactsRelation;
+
 
 
 //Method to tell us if the user is a contact so that we can add a check mark
