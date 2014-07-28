@@ -109,8 +109,7 @@
     self.selectedMessage = [self.messages objectAtIndex:indexPath.row];
     
     PFFile *audioFile = [message objectForKey:@"file"];
-    NSURL *audioFileURL = [[NSURL alloc] initWithString:audioFile.url];
-    NSData *audioData = [NSData dataWithContentsOfURL:audioFileURL];
+
     
     [audioFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if (error) {

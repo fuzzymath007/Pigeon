@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "GAIDictionaryBuilder.h"
 
 @implementation AppDelegate
 
@@ -30,6 +31,8 @@
     
     // 4
     id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-52739907-1"];
+    [tracker set:kGAIScreenName value:@"App Start"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
     
     
     [self setupAppearance];
