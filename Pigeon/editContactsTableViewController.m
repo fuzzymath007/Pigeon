@@ -120,10 +120,28 @@
     }
     
     [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (error) {
+        if (!error) {
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Good Bye Friend" message:@"Your contact is no more." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            // optional - add more buttons:
+            [alert show];
+            
+        }else{
             NSLog(@"%@ %@",error, [error userInfo]);
         }
     }];
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
+    if(buttonIndex==0)//first button which should be the OK button
+    {
+        
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    }
     
 }
 

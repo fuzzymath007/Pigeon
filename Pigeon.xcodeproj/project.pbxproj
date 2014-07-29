@@ -15,6 +15,8 @@
 		5707A64C19808E12003B6C9C /* remove_user-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 5707A64919808E12003B6C9C /* remove_user-32.png */; };
 		5707A64E19808FE8003B6C9C /* edit_user-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 5707A64D19808FE8003B6C9C /* edit_user-32.png */; };
 		5707A650198090FE003B6C9C /* cancel-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 5707A64F198090FE003B6C9C /* cancel-75.png */; };
+		570A1BE11987138C00493EF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C9C008195A71B500D8D3EE /* Foundation.framework */; };
+		570A1BE61987300200493EF2 /* micro-256(red).png in Resources */ = {isa = PBXBuildFile; fileRef = 570A1BE51987300200493EF2 /* micro-256(red).png */; };
 		57428D02196B6BE6001C2E70 /* RecordAMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57428D01196B6BE6001C2E70 /* RecordAMessageViewController.m */; };
 		5764231B196F8AB30004F992 /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57642319196F8AB30004F992 /* libAdIdAccess.a */; };
 		5764231C196F8AB30004F992 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5764231A196F8AB30004F992 /* libGoogleAnalyticsServices.a */; };
@@ -50,7 +52,6 @@
 		57F1DDDE195CDCE900DAEB4F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F1DDDD195CDCE900DAEB4F /* Security.framework */; };
 		57F1DDE0195CDCF100DAEB4F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F1DDDF195CDCF100DAEB4F /* StoreKit.framework */; };
 		57F1DDE2195CDCF900DAEB4F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F1DDE1195CDCF900DAEB4F /* SystemConfiguration.framework */; };
-		57F1DDE3195CDEA100DAEB4F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C9C008195A71B500D8D3EE /* Foundation.framework */; };
 		57F1DDE6195CE14B00DAEB4F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F1DDE5195CE14B00DAEB4F /* LoginViewController.m */; };
 		57F1DDE9195CE16F00DAEB4F /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F1DDE8195CE16F00DAEB4F /* SignUpViewController.m */; };
 		57FF7B79197F2FBD00655F69 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FF7B71197F2FBD00655F69 /* Icon-60.png */; };
@@ -78,12 +79,13 @@
 /* Begin PBXFileReference section */
 		5707A64119808C5F003B6C9C /* listen-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "listen-32.png"; path = "../listen-32.png"; sourceTree = "<group>"; };
 		5707A64319808CE7003B6C9C /* megaphone-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "megaphone-32.png"; sourceTree = "<group>"; };
-		5707A64519808DBE003B6C9C /* group-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "group-32.png"; sourceTree = "<group>"; };
-		5707A64719808E12003B6C9C /* add_user-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_user-32.png"; sourceTree = "<group>"; };
-		5707A64819808E12003B6C9C /* find_user-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "find_user-32.png"; sourceTree = "<group>"; };
-		5707A64919808E12003B6C9C /* remove_user-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "remove_user-32.png"; sourceTree = "<group>"; };
-		5707A64D19808FE8003B6C9C /* edit_user-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit_user-32.png"; sourceTree = "<group>"; };
-		5707A64F198090FE003B6C9C /* cancel-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel-75.png"; sourceTree = "<group>"; };
+		5707A64519808DBE003B6C9C /* group-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "group-32.png"; path = "../group-32.png"; sourceTree = "<group>"; };
+		5707A64719808E12003B6C9C /* add_user-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "add_user-32.png"; path = "../add_user-32.png"; sourceTree = "<group>"; };
+		5707A64819808E12003B6C9C /* find_user-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "find_user-32.png"; path = "../find_user-32.png"; sourceTree = "<group>"; };
+		5707A64919808E12003B6C9C /* remove_user-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "remove_user-32.png"; path = "../remove_user-32.png"; sourceTree = "<group>"; };
+		5707A64D19808FE8003B6C9C /* edit_user-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "edit_user-32.png"; path = "../edit_user-32.png"; sourceTree = "<group>"; };
+		5707A64F198090FE003B6C9C /* cancel-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cancel-75.png"; path = "../cancel-75.png"; sourceTree = "<group>"; };
+		570A1BE51987300200493EF2 /* micro-256(red).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "micro-256(red).png"; sourceTree = "<group>"; };
 		57428D00196B6BE6001C2E70 /* RecordAMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordAMessageViewController.h; sourceTree = "<group>"; };
 		57428D01196B6BE6001C2E70 /* RecordAMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordAMessageViewController.m; sourceTree = "<group>"; };
 		5764230F196F8A8A0004F992 /* GAI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
@@ -99,8 +101,8 @@
 		57642319196F8AB30004F992 /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdIdAccess.a; sourceTree = "<group>"; };
 		5764231A196F8AB30004F992 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		5764231D196F8ABF0004F992 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		577D21F0198096450000AB51 /* upload_to_cloud-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload_to_cloud-32.png"; sourceTree = "<group>"; };
-		577D21F2198096B40000AB51 /* micro-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "micro-256.png"; sourceTree = "<group>"; };
+		577D21F0198096450000AB51 /* upload_to_cloud-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "upload_to_cloud-32.png"; path = "../upload_to_cloud-32.png"; sourceTree = "<group>"; };
+		577D21F2198096B40000AB51 /* micro-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "micro-256.png"; path = "../micro-256.png"; sourceTree = "<group>"; };
 		57934B55196216F800D8BA2C /* ContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
 		57934B56196216F800D8BA2C /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
 		57934B581962414A00D8BA2C /* ContactSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactSearchTableViewController.h; sourceTree = "<group>"; };
@@ -163,11 +165,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				570A1BE11987138C00493EF2 /* Foundation.framework in Frameworks */,
 				57F1DDD8195CDCC900DAEB4F /* libz.dylib in Frameworks */,
 				57F1DDE2195CDCF900DAEB4F /* SystemConfiguration.framework in Frameworks */,
 				5764231E196F8ABF0004F992 /* CoreData.framework in Frameworks */,
 				57BABFDB1963A10A0075117F /* AVFoundation.framework in Frameworks */,
-				57F1DDE3195CDEA100DAEB4F /* Foundation.framework in Frameworks */,
 				57F1DDE0195CDCF100DAEB4F /* StoreKit.framework in Frameworks */,
 				5764231B196F8AB30004F992 /* libAdIdAccess.a in Frameworks */,
 				57F1DDDE195CDCE900DAEB4F /* Security.framework in Frameworks */,
@@ -199,14 +201,6 @@
 		57C9BFFC195A71B500D8D3EE = {
 			isa = PBXGroup;
 			children = (
-				577D21F2198096B40000AB51 /* micro-256.png */,
-				577D21F0198096450000AB51 /* upload_to_cloud-32.png */,
-				5707A64F198090FE003B6C9C /* cancel-75.png */,
-				5707A64D19808FE8003B6C9C /* edit_user-32.png */,
-				5707A64719808E12003B6C9C /* add_user-32.png */,
-				5707A64819808E12003B6C9C /* find_user-32.png */,
-				5707A64919808E12003B6C9C /* remove_user-32.png */,
-				5707A64519808DBE003B6C9C /* group-32.png */,
 				57C9C00E195A71B500D8D3EE /* Pigeon */,
 				57C9C02D195A71B500D8D3EE /* PigeonTests */,
 				57C9C007195A71B500D8D3EE /* Frameworks */,
@@ -250,11 +244,7 @@
 		57C9C00E195A71B500D8D3EE /* Pigeon */ = {
 			isa = PBXGroup;
 			children = (
-				5707A64319808CE7003B6C9C /* megaphone-32.png */,
 				57FF7B81197F300000655F69 /* Images */,
-				57642319196F8AB30004F992 /* libAdIdAccess.a */,
-				5764231A196F8AB30004F992 /* libGoogleAnalyticsServices.a */,
-				5707A64119808C5F003B6C9C /* listen-32.png */,
 				57C9C01A195A71B500D8D3EE /* Main.storyboard */,
 				57428D00196B6BE6001C2E70 /* RecordAMessageViewController.h */,
 				57428D01196B6BE6001C2E70 /* RecordAMessageViewController.m */,
@@ -283,6 +273,8 @@
 		57C9C00F195A71B500D8D3EE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				57642319196F8AB30004F992 /* libAdIdAccess.a */,
+				5764231A196F8AB30004F992 /* libGoogleAnalyticsServices.a */,
 				5764230F196F8A8A0004F992 /* GAI.h */,
 				57642310196F8A8A0004F992 /* GAIDictionaryBuilder.h */,
 				57642311196F8A8A0004F992 /* GAIEcommerceFields.h */,
@@ -324,6 +316,17 @@
 		57FF7B81197F300000655F69 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				570A1BE51987300200493EF2 /* micro-256(red).png */,
+				5707A64119808C5F003B6C9C /* listen-32.png */,
+				577D21F2198096B40000AB51 /* micro-256.png */,
+				577D21F0198096450000AB51 /* upload_to_cloud-32.png */,
+				5707A64F198090FE003B6C9C /* cancel-75.png */,
+				5707A64D19808FE8003B6C9C /* edit_user-32.png */,
+				5707A64719808E12003B6C9C /* add_user-32.png */,
+				5707A64819808E12003B6C9C /* find_user-32.png */,
+				5707A64919808E12003B6C9C /* remove_user-32.png */,
+				5707A64519808DBE003B6C9C /* group-32.png */,
+				5707A64319808CE7003B6C9C /* megaphone-32.png */,
 				57FF7B88197F32A400655F69 /* 960_piegon_launch.png */,
 				57FF7B85197F325D00655F69 /* 1136_piegon_launch.png */,
 				57FF7B71197F2FBD00655F69 /* Icon-60.png */,
@@ -427,6 +430,7 @@
 				57FF7B89197F32A400655F69 /* 960_piegon_launch.png in Resources */,
 				5707A64C19808E12003B6C9C /* remove_user-32.png in Resources */,
 				5707A64419808CE7003B6C9C /* megaphone-32.png in Resources */,
+				570A1BE61987300200493EF2 /* micro-256(red).png in Resources */,
 				57FF7B79197F2FBD00655F69 /* Icon-60.png in Resources */,
 				577D21F3198096B40000AB51 /* micro-256.png in Resources */,
 				577D21F1198096450000AB51 /* upload_to_cloud-32.png in Resources */,

@@ -26,7 +26,6 @@
 {
     [super viewDidLoad];
     
-
     
     NSArray *dirPaths;
     NSString *docsDir;
@@ -104,10 +103,9 @@
     if (!self.audioRecorder.recording)
     {
         [self.audioRecorder record];
-        
-        
-        
+
     }
+    
     
 }
 

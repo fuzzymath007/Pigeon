@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A283o" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ox1-5V-5Fq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ox1-5V-5Fq">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -360,11 +360,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAv-ix-tgN">
-                                <rect key="frame" x="75" y="128" width="171" height="177"/>
-                                <state key="normal" title="Record Sound" image="micro-256.png">
+                                <rect key="frame" x="75" y="118" width="171" height="177"/>
+                                <state key="normal" title="RecordSound" image="micro-256.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="selected" title="Recording"/>
+                                <state key="selected" title="RecordSound" image="micro-256(red).png"/>
+                                <state key="highlighted" image="micro-256(red).png"/>
                                 <connections>
                                     <action selector="recordMessage:" destination="2La-kg-Swi" eventType="touchDown" id="eLi-ES-pti"/>
                                     <action selector="stopRecording:" destination="2La-kg-Swi" eventType="touchUpInside" id="Ugo-4G-Pz4"/>
@@ -484,6 +485,7 @@
         <image name="group-32.png" width="32" height="32"/>
         <image name="listen-32.png" width="32" height="32"/>
         <image name="megaphone-32.png" width="32" height="32"/>
+        <image name="micro-256(red).png" width="256" height="256"/>
         <image name="micro-256.png" width="256" height="256"/>
         <image name="upload_to_cloud-32.png" width="32" height="32"/>
     </resources>

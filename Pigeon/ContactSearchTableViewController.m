@@ -9,6 +9,8 @@
 #import "ContactSearchTableViewController.h"
 #import "GAIDictionaryBuilder.h"
 
+
+
 @interface ContactSearchTableViewController ()
 
 @end
@@ -163,12 +165,27 @@
     
     [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Contact Added" message:@"Your Contact has been added!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            // optional - add more buttons:
+            [alert show];
             
         }else{
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
+
     
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
+    if(buttonIndex==0)//first button which should be the OK button
+    {
+        
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    }
     
 }
 
