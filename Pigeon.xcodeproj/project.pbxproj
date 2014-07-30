@@ -23,6 +23,7 @@
 		5764231E196F8ABF0004F992 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5764231D196F8ABF0004F992 /* CoreData.framework */; };
 		577D21F1198096450000AB51 /* upload_to_cloud-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 577D21F0198096450000AB51 /* upload_to_cloud-32.png */; };
 		577D21F3198096B40000AB51 /* micro-256.png in Resources */ = {isa = PBXBuildFile; fileRef = 577D21F2198096B40000AB51 /* micro-256.png */; };
+		5780A6D519888C2900E78A10 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5780A6D419888C2900E78A10 /* Settings.bundle */; };
 		57934B57196216F800D8BA2C /* ContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57934B56196216F800D8BA2C /* ContactsTableViewController.m */; };
 		57934B5A1962414A00D8BA2C /* ContactSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57934B591962414A00D8BA2C /* ContactSearchTableViewController.m */; };
 		57AC739E1960FB620079A639 /* editContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AC739D1960FB620079A639 /* editContactsTableViewController.m */; };
@@ -103,6 +104,7 @@
 		5764231D196F8ABF0004F992 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		577D21F0198096450000AB51 /* upload_to_cloud-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "upload_to_cloud-32.png"; path = "../upload_to_cloud-32.png"; sourceTree = "<group>"; };
 		577D21F2198096B40000AB51 /* micro-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "micro-256.png"; path = "../micro-256.png"; sourceTree = "<group>"; };
+		5780A6D419888C2900E78A10 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		57934B55196216F800D8BA2C /* ContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
 		57934B56196216F800D8BA2C /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
 		57934B581962414A00D8BA2C /* ContactSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactSearchTableViewController.h; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			children = (
 				57FF7B81197F300000655F69 /* Images */,
 				57C9C01A195A71B500D8D3EE /* Main.storyboard */,
+				5780A6D419888C2900E78A10 /* Settings.bundle */,
 				57428D00196B6BE6001C2E70 /* RecordAMessageViewController.h */,
 				57428D01196B6BE6001C2E70 /* RecordAMessageViewController.m */,
 				57934B581962414A00D8BA2C /* ContactSearchTableViewController.h */,
@@ -439,6 +442,7 @@
 				57C9C013195A71B500D8D3EE /* InfoPlist.strings in Resources */,
 				57C9C01C195A71B500D8D3EE /* Main.storyboard in Resources */,
 				5707A64619808DBE003B6C9C /* group-32.png in Resources */,
+				5780A6D519888C2900E78A10 /* Settings.bundle in Resources */,
 				5707A64219808C5F003B6C9C /* listen-32.png in Resources */,
 				5707A64A19808E12003B6C9C /* add_user-32.png in Resources */,
 			);
