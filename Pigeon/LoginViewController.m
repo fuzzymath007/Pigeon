@@ -32,7 +32,7 @@
     [tracker set:kGAIScreenName value:@"Login"];
     [tracker send:[[GAIDictionaryBuilder createAppView] build]];
     
-    [self.navigationController.navigationBar setHidden:YES];
+    [[self view] endEditing:YES];
 }
 
 
@@ -61,7 +61,21 @@
     
 }
 
+-(IBAction)textFieldReturn:(id)sender
+{
+    [sender resignFirstResponder];
+}
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [[event allTouches] anyObject];
+    if ([self.codeName isFirstResponder] && [touch view] != self.codeName) {
+        [self.codeName resignFirstResponder];
+    }else if([self.passWord isFirstResponder] && [touch view] != self.passWord){
+        [self.passWord resignFirstResponder];
+    }
+    [super touchesBegan:touches withEvent:event];
+}
     
 
 

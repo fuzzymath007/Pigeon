@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *codeName;
-
 @property (weak, nonatomic) IBOutlet UITextField *passWord;
+
+
 - (IBAction)submitLogin:(id)sender;
+
+-(IBAction)textFieldReturn:(id)sender;
 
 @end
