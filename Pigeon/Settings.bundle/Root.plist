@@ -7,8 +7,14 @@
 		<dict>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
+			<key>Key</key>
+			<string>Help</string>
 			<key>Title</key>
-			<string>Piegon Info</string>
+			<string>Thank you for downloading my app. This app is being provided as a free service. If you would like to submit a bug or have a question about Pigeon, please email me at mchess@umich.edu.
+
+The icons for this app are provided by Icons8 at icons8.com.
+
+Also a shoutout to teamtreehouse for helping me learn to make this app.</string>
 		</dict>
 	</array>
 	<key>StringsTable</key>

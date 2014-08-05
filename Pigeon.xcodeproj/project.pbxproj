@@ -17,6 +17,7 @@
 		5707A650198090FE003B6C9C /* cancel-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 5707A64F198090FE003B6C9C /* cancel-75.png */; };
 		570A1BE11987138C00493EF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C9C008195A71B500D8D3EE /* Foundation.framework */; };
 		570A1BE61987300200493EF2 /* micro-256(red).png in Resources */ = {isa = PBXBuildFile; fileRef = 570A1BE51987300200493EF2 /* micro-256(red).png */; };
+		57338F7619904C99002AE426 /* my.license in Resources */ = {isa = PBXBuildFile; fileRef = 57338F7519904C99002AE426 /* my.license */; };
 		57428D02196B6BE6001C2E70 /* RecordAMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57428D01196B6BE6001C2E70 /* RecordAMessageViewController.m */; };
 		5764231B196F8AB30004F992 /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57642319196F8AB30004F992 /* libAdIdAccess.a */; };
 		5764231C196F8AB30004F992 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5764231A196F8AB30004F992 /* libGoogleAnalyticsServices.a */; };
@@ -87,6 +88,7 @@
 		5707A64D19808FE8003B6C9C /* edit_user-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "edit_user-32.png"; path = "../edit_user-32.png"; sourceTree = "<group>"; };
 		5707A64F198090FE003B6C9C /* cancel-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cancel-75.png"; path = "../cancel-75.png"; sourceTree = "<group>"; };
 		570A1BE51987300200493EF2 /* micro-256(red).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "micro-256(red).png"; sourceTree = "<group>"; };
+		57338F7519904C99002AE426 /* my.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = my.license; sourceTree = "<group>"; };
 		57428D00196B6BE6001C2E70 /* RecordAMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordAMessageViewController.h; sourceTree = "<group>"; };
 		57428D01196B6BE6001C2E70 /* RecordAMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordAMessageViewController.m; sourceTree = "<group>"; };
 		5764230F196F8A8A0004F992 /* GAI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
@@ -104,7 +106,7 @@
 		5764231D196F8ABF0004F992 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		577D21F0198096450000AB51 /* upload_to_cloud-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "upload_to_cloud-32.png"; path = "../upload_to_cloud-32.png"; sourceTree = "<group>"; };
 		577D21F2198096B40000AB51 /* micro-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "micro-256.png"; path = "../micro-256.png"; sourceTree = "<group>"; };
-		5780A6D419888C2900E78A10 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		5780A6D419888C2900E78A10 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Pigeon/Settings.bundle; sourceTree = "<group>"; };
 		57934B55196216F800D8BA2C /* ContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsTableViewController.h; sourceTree = "<group>"; };
 		57934B56196216F800D8BA2C /* ContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsTableViewController.m; sourceTree = "<group>"; };
 		57934B581962414A00D8BA2C /* ContactSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactSearchTableViewController.h; sourceTree = "<group>"; };
@@ -200,9 +202,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57338F7419904C67002AE426 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				57338F7519904C99002AE426 /* my.license */,
+				5780A6D419888C2900E78A10 /* Settings.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		57C9BFFC195A71B500D8D3EE = {
 			isa = PBXGroup;
 			children = (
+				57338F7419904C67002AE426 /* Resources */,
 				57C9C00E195A71B500D8D3EE /* Pigeon */,
 				57C9C02D195A71B500D8D3EE /* PigeonTests */,
 				57C9C007195A71B500D8D3EE /* Frameworks */,
@@ -248,7 +260,6 @@
 			children = (
 				57FF7B81197F300000655F69 /* Images */,
 				57C9C01A195A71B500D8D3EE /* Main.storyboard */,
-				5780A6D419888C2900E78A10 /* Settings.bundle */,
 				57428D00196B6BE6001C2E70 /* RecordAMessageViewController.h */,
 				57428D01196B6BE6001C2E70 /* RecordAMessageViewController.m */,
 				57934B581962414A00D8BA2C /* ContactSearchTableViewController.h */,
@@ -391,6 +402,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = matthewchess;
 				TargetAttributes = {
+					57C9C004195A71B500D8D3EE = {
+						DevelopmentTeam = WT24N59ZSA;
+					};
 					57C9C025195A71B500D8D3EE = {
 						TestTargetID = 57C9C004195A71B500D8D3EE;
 					};
@@ -437,6 +451,7 @@
 				57FF7B79197F2FBD00655F69 /* Icon-60.png in Resources */,
 				577D21F3198096B40000AB51 /* micro-256.png in Resources */,
 				577D21F1198096450000AB51 /* upload_to_cloud-32.png in Resources */,
+				57338F7619904C99002AE426 /* my.license in Resources */,
 				57FF7B7A197F2FBD00655F69 /* Icon-60@2x.png in Resources */,
 				57FF7B7F197F2FBD00655F69 /* Icon-Small.png in Resources */,
 				57C9C013195A71B500D8D3EE /* InfoPlist.strings in Resources */,
@@ -598,6 +613,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -610,6 +627,7 @@
 					"$(PROJECT_DIR)/Pigeon",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -619,6 +637,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -631,6 +651,7 @@
 					"$(PROJECT_DIR)/Pigeon",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

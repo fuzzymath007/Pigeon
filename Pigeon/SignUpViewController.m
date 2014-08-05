@@ -54,7 +54,7 @@
     
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (error) {
-            UIAlertView *accountNotCreated = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"Your account has NOT been created" delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
+            UIAlertView *accountNotCreated = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Your account has not been created. Check if you entered a valid email." delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
             [accountNotCreated show];
         }else{
             
