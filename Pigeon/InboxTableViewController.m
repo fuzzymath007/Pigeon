@@ -31,7 +31,10 @@
 {
     [super viewDidLoad];
     
-    self.currentUser = [PFUser currentUser];
+    if ([PFUser currentUser] != nil) {
+        self.currentUser = [PFUser currentUser];
+    }
+    
     
     if (self.currentUser) {
             NSLog(@"Current User is %@",self.currentUser);
@@ -51,19 +54,23 @@
     
     [self.navigationController.navigationBar setHidden:NO];
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Messages"];
-    [query whereKey:@"Recipients" equalTo:[[PFUser currentUser] objectId]];
-    [query orderByDescending:@"createdAt"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (error) {
-            NSLog(@"Error %@ %@", error, error.userInfo);
-        }else{
-            //We got our messages stored in our objects array stroed in our block
-            
-            self.messages = objects;
-            [self.tableView reloadData];
-        }
-    }];
+    if (self.currentUser != nil) {
+        PFQuery *query = [PFQuery queryWithClassName:@"Messages"];
+        [query whereKey:@"Recipients" equalTo:[[PFUser currentUser] objectId]];
+        [query orderByDescending:@"createdAt"];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (error) {
+                NSLog(@"Error %@ %@", error, error.userInfo);
+            }else{
+                //We got our messages stored in our objects array stroed in our block
+                
+                self.messages = objects;
+                [self.tableView reloadData];
+            }
+        }];
+    }
+    
+
 
 }
 
