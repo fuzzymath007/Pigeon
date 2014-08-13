@@ -28,6 +28,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Indox" id="QnU-v8-eV8">
+                        <barButtonItem key="leftBarButtonItem" image="update-32.png" id="xr8-fv-fRh">
+                            <connections>
+                                <action selector="reloadView:" destination="9L6-jj-5no" id="k4T-Q5-Xb3"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="Def-Rb-Gcx">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dHp-ci-91j">
                                 <rect key="frame" x="233" y="7" width="71" height="30"/>
@@ -424,7 +429,7 @@
                                 <action selector="previewMessage:" destination="OzF-fP-rUp" eventType="touchUpInside" id="RD9-6C-qa2"/>
                             </connections>
                         </button>
-                        <barButtonItem key="rightBarButtonItem" image="upload_to_cloud-32.png" id="trD-nO-46B">
+                        <barButtonItem key="rightBarButtonItem" image="sent-32.png" id="trD-nO-46B">
                             <connections>
                                 <action selector="sendMessageButton:" destination="OzF-fP-rUp" id="jSj-pi-1fb"/>
                             </connections>
@@ -480,7 +485,8 @@
         <image name="megaphone-32.png" width="32" height="32"/>
         <image name="micro-256(red).png" width="256" height="256"/>
         <image name="micro-256.png" width="256" height="256"/>
-        <image name="upload_to_cloud-32.png" width="32" height="32"/>
+        <image name="sent-32.png" width="32" height="32"/>
+        <image name="update-32.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

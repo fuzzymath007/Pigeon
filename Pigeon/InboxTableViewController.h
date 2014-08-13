@@ -23,6 +23,7 @@
 
 -(IBAction)logOut:(id)sender;
 
+- (IBAction)reloadView:(id)sender;
 
 
 @end

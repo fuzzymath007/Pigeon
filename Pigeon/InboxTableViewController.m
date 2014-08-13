@@ -144,7 +144,6 @@
             [self.audioPlayer play];
             
             NSMutableArray *recipientsInMeaages = [NSMutableArray arrayWithArray:[self.selectedMessage objectForKey:@"Recipients"]];
-            NSLog(@"%@",recipientsInMeaages);
             
             if ([recipientsInMeaages count] == 1) {
                 [self.selectedMessage deleteInBackground];
@@ -167,57 +166,32 @@
     
 }
 
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-//    if ([segue.identifier isEqualToString:@"showLogin"]) {
-//        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
-//    }
-//    else if ([segue.identifier isEqualToString:@"playAudioMessage"]) {
-//        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
-//        playMessageViewController *playAMessageViewController = (playMessageViewController *)segue.destinationViewController;
-//        playAMessageViewController.message = self.selectedMessage;
-//        
-//    }
-//    
-//}
 
 -(IBAction)logOut:(id)sender {
     
     [PFUser logOut];
     [self performSegueWithIdentifier:@"showLogin" sender:self];
-    PFUser *currentUser = [PFUser currentUser];
-    NSLog(@"Current User is %@",currentUser);
 }
 
-
-
-
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
+- (IBAction)reloadView:(id)sender {
+    if (self.currentUser != nil) {
+        PFQuery *query = [PFQuery queryWithClassName:@"Messages"];
+        [query whereKey:@"Recipients" equalTo:[[PFUser currentUser] objectId]];
+        [query orderByDescending:@"createdAt"];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (error) {
+                NSLog(@"Error %@ %@", error, error.userInfo);
+            }else{
+                //We got our messages stored in our objects array stroed in our block
+                
+                self.messages = objects;
+                [self.tableView reloadData];
+            }
+        }];
+    }
+    
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 
 @end

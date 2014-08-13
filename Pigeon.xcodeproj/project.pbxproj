@@ -43,6 +43,8 @@
 		57C9C02A195A71B500D8D3EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C9C00C195A71B500D8D3EE /* UIKit.framework */; };
 		57C9C032195A71B500D8D3EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 57C9C030195A71B500D8D3EE /* InfoPlist.strings */; };
 		57C9C034195A71B500D8D3EE /* PigeonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C9C033195A71B500D8D3EE /* PigeonTests.m */; };
+		57E1A51D199ADF610021FCD7 /* sent-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E1A51C199ADF610021FCD7 /* sent-32.png */; };
+		57E1A51F199ADF990021FCD7 /* update-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E1A51E199ADF990021FCD7 /* update-32.png */; };
 		57F1DDCE195CCEF600DAEB4F /* InboxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F1DDCD195CCEF600DAEB4F /* InboxTableViewController.m */; };
 		57F1DDD0195CDC8800DAEB4F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F1DDCF195CDC8800DAEB4F /* Parse.framework */; };
 		57F1DDD2195CDCA200DAEB4F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F1DDD1195CDCA200DAEB4F /* AudioToolbox.framework */; };
@@ -136,6 +138,8 @@
 		57C9C02F195A71B500D8D3EE /* PigeonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PigeonTests-Info.plist"; sourceTree = "<group>"; };
 		57C9C031195A71B500D8D3EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		57C9C033195A71B500D8D3EE /* PigeonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PigeonTests.m; sourceTree = "<group>"; };
+		57E1A51C199ADF610021FCD7 /* sent-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sent-32.png"; sourceTree = "<group>"; };
+		57E1A51E199ADF990021FCD7 /* update-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "update-32.png"; sourceTree = "<group>"; };
 		57F1DDCC195CCEF600DAEB4F /* InboxTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxTableViewController.h; sourceTree = "<group>"; };
 		57F1DDCD195CCEF600DAEB4F /* InboxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxTableViewController.m; sourceTree = "<group>"; };
 		57F1DDCF195CDC8800DAEB4F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -330,6 +334,8 @@
 		57FF7B81197F300000655F69 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				57E1A51E199ADF990021FCD7 /* update-32.png */,
+				57E1A51C199ADF610021FCD7 /* sent-32.png */,
 				570A1BE51987300200493EF2 /* micro-256(red).png */,
 				5707A64119808C5F003B6C9C /* listen-32.png */,
 				577D21F2198096B40000AB51 /* micro-256.png */,
@@ -439,6 +445,7 @@
 				57FF7B7B197F2FBD00655F69 /* Icon-76.png in Resources */,
 				57C9C021195A71B500D8D3EE /* Images.xcassets in Resources */,
 				5707A64B19808E12003B6C9C /* find_user-32.png in Resources */,
+				57E1A51D199ADF610021FCD7 /* sent-32.png in Resources */,
 				5707A64E19808FE8003B6C9C /* edit_user-32.png in Resources */,
 				57FF7B87197F325D00655F69 /* 1136_piegon_launch.png in Resources */,
 				5707A650198090FE003B6C9C /* cancel-75.png in Resources */,
@@ -458,6 +465,7 @@
 				57C9C01C195A71B500D8D3EE /* Main.storyboard in Resources */,
 				5707A64619808DBE003B6C9C /* group-32.png in Resources */,
 				5780A6D519888C2900E78A10 /* Settings.bundle in Resources */,
+				57E1A51F199ADF990021FCD7 /* update-32.png in Resources */,
 				5707A64219808C5F003B6C9C /* listen-32.png in Resources */,
 				5707A64A19808E12003B6C9C /* add_user-32.png in Resources */,
 			);
