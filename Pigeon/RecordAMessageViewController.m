@@ -51,7 +51,7 @@
     
     NSError *error = nil;
     
-    _audioRecorder = [[AVAudioRecorder alloc]
+    self.audioRecorder = [[AVAudioRecorder alloc]
                       initWithURL:soundFileURL
                       settings:recordSettings
                       error:&error];
@@ -60,8 +60,7 @@
     {
         NSLog(@"error: %@", [error localizedDescription]);
     } else {
-        [_audioRecorder prepareToRecord];
-        NSLog(@" %@",docsDir);
+        [self.audioRecorder prepareToRecord];
     }
     
 }
