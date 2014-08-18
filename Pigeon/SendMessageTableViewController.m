@@ -69,6 +69,12 @@
 
 #pragma mark - Table view data source
 
+-(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    
+    NSString *title = @"Select one or more contacts";
+    return title;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 
@@ -147,6 +153,12 @@
         UIAlertView *noMessageAlert = [[UIAlertView alloc] initWithTitle:@"No Message" message:@"Something has gone wrong. Please record your message again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         
         [noMessageAlert show];
+    }
+    
+    if (self.recipients.count == 0) {
+        UIAlertView *noRecipients = [[UIAlertView alloc] initWithTitle:@"No Recipients" message:@"Please select at least one contact to receive your message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [noRecipients show];
     }
     
     

@@ -41,10 +41,10 @@
     
     NSString *email = [self.email.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *passWord = [self.passWord.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    NSString *codeName = [self.codeName.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *codeNameTrim = [self.codeName.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    codeNameTrim = [codeNameTrim lowercaseString];
     NSString *retypePassword = [self.retypePassWord.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    
-    if ([email length] == 0 || [passWord length] == 0 || [codeName length] == 0) {
+    if ([email length] == 0 || [passWord length] == 0 || [codeNameTrim length] == 0) {
         UIAlertView *missingValueAlert = [[UIAlertView alloc] initWithTitle:@"Missing Something" message:@"You left a field blank" delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
         [missingValueAlert show];
     }else if(![passWord isEqualToString:retypePassword]){
@@ -55,7 +55,7 @@
     else{
     
     PFUser *newUser = [PFUser user];
-    newUser.username = self.codeName.text;
+    newUser.username = codeNameTrim;
     newUser.password = self.passWord.text;
     newUser.email = self.email.text;
     
@@ -69,7 +69,7 @@
     }];
     }
     
-    
+    NSLog(@"%@",codeNameTrim);
 }
 
 - (IBAction)backToLogIn:(id)sender {

@@ -41,6 +41,7 @@
     
     NSString *passWord = [self.passWord.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *codeName = [self.codeName.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    codeName =[codeName lowercaseString];
     
     if ([passWord length] == 0 || [codeName length] == 0) {
         UIAlertView *missingValueAlert = [[UIAlertView alloc] initWithTitle:@"Missing Something" message:@"You left a field blank" delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
@@ -48,11 +49,15 @@
     }else{
         
         [PFUser logInWithUsernameInBackground:codeName password:passWord block:^(PFUser *user, NSError *error) {
-            if (error) {
-                NSLog(@"%@",error);
-            }else{
-                
+            if (user) {
                 [self.navigationController popToRootViewControllerAnimated:YES];
+               
+            }else if (error == nil){
+               UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Couldn’t log in:\nThe username or password were wrong." message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                [alertView show];
+            }
+            else{
+                NSLog(@"%@",error);
             }
         }];
         

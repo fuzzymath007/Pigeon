@@ -112,8 +112,9 @@
     self.foundContact = nil;
     
     NSString *searchedText = [self.searchContacts.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    searchedText = [searchedText lowercaseString];
     
-    
+    NSLog(@"%@",searchedText);
     
     if (!searchBar.text == 0) {
         PFQuery *query = [PFUser query];
