@@ -161,7 +161,7 @@
         [noRecipients show];
     }
     
-    
+    if (self.recipients.count > 0) {
     
     [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         
@@ -198,6 +198,7 @@
         }
     }];
     
+    }
     
     
 }

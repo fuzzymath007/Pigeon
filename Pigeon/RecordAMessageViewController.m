@@ -10,16 +10,12 @@
 #import "GAIDictionaryBuilder.h"
 
 
-@interface RecordAMessageViewController ()
-{
-    int recorded_time;
-    NSTimer *timer;
+@interface RecordAMessageViewController  ()
 
-}
+
 @end
 
 @implementation RecordAMessageViewController
-
 
 
 - (void)viewDidLoad
@@ -105,6 +101,7 @@
 
     }
     
+
     
 }
 
@@ -114,6 +111,7 @@
     {
         [self.audioRecorder stop];
     }
+
     
     [self performSegueWithIdentifier:@"showContactsForMessage" sender:self];
 }
