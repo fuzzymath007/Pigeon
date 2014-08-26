@@ -1,0 +1,22 @@
+PODS:
+  - Bolts (1.1.2)
+  - Facebook-iOS-SDK (3.17.0):
+    - Bolts
+  - GoogleAnalytics-iOS-SDK (3.0.9)
+  - Parse (1.2.20):
+    - Facebook-iOS-SDK (~> 3.11)
+  - TheAmazingAudioEngine (1.4.2)
+
+DEPENDENCIES:
+  - GoogleAnalytics-iOS-SDK
+  - Parse (= 1.2.20)
+  - TheAmazingAudioEngine (= 1.4.2)
+
+SPEC CHECKSUMS:
+  Bolts: 2635e8698a630774689441047f3465d78c48d485
+  Facebook-iOS-SDK: f20274d809f112ba540842e2b6cbe50128d51b7b
+  GoogleAnalytics-iOS-SDK: d9e198b1f955259a72886769be7377cdfcdb2250
+  Parse: 28c0dc54f30201a369d29a2f76c09fa43b2add16
+  TheAmazingAudioEngine: d5a503ad7455329eb4877cfb57acd32498ef12c9
+
+COCOAPODS: 0.33.1
