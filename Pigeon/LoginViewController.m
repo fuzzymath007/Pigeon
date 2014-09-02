@@ -51,8 +51,13 @@
         [PFUser logInWithUsernameInBackground:codeName password:passWord block:^(PFUser *user, NSError *error) {
             if (user) {
                 [self.navigationController popToRootViewControllerAnimated:YES];
+            }
+                else if (error.code == 101) {
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Invalid Login Credentials" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                    [alertView show];
+                }
                
-            }else if (error == nil){
+            else if (error == nil){
                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Couldn’t log in:\nThe username or password were wrong." message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
                 [alertView show];
             }

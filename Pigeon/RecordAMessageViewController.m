@@ -52,6 +52,8 @@
                       settings:recordSettings
                       error:&error];
     
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryRecord error:NULL];
+    
     if (error)
     {
         NSLog(@"error: %@", [error localizedDescription]);

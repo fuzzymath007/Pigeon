@@ -38,7 +38,19 @@
 - (IBAction)submitReset:(id)sender {
     NSString* emailReset = [self.emailField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
-    [PFUser requestPasswordResetForEmailInBackground:emailReset];
+    
+//    [PFUser requestPasswordResetForEmailInBackground:emailReset block:^(NSError *error)];
+    [PFUser requestPasswordResetForEmailInBackground:emailReset block:^(BOOL succeeded, NSError *error) {
+        if (error.code == 205) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"No Email Address Found" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+            [alertView show];
+        }
+        else{
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }
+    }];
+    
+
 }
 
 
