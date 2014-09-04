@@ -58,7 +58,7 @@
                 }
                
             else if (error == nil){
-               UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Couldn’t log in:\nThe username or password were wrong." message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+               UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Could not log in:\nThe username or password were wrong." message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
                 [alertView show];
             }
             else{
