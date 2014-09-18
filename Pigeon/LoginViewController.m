@@ -22,6 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.navigationController.navigationBarHidden = true;
 
 }
 
@@ -37,6 +38,8 @@
 
 
 - (IBAction)submitLogin:(id)sender {
+    
+    [super viewDidLoad];
     
     
     NSString *passWord = [self.passWord.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];

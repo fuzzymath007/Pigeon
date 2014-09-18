@@ -15,14 +15,14 @@
 
 @implementation InboxTableViewController
 
-- (instancetype)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+//- (instancetype)initWithStyle:(UITableViewStyle)style
+//{
+//    self = [super initWithStyle:style];
+//    if (self) {
+//        // Custom initialization
+//    }
+//    return self;
+//}
 
 
 
@@ -31,6 +31,8 @@
 {
     [super viewDidLoad];
     
+   self.navigationController.navigationBarHidden = false;
+    
     if ([PFUser currentUser] != nil) {
         self.currentUser = [PFUser currentUser];
     }
@@ -38,11 +40,10 @@
     
     if (self.currentUser) {
             NSLog(@"Current User is %@",self.currentUser);
-        [self.navigationController popToRootViewControllerAnimated:YES];
+   [self.navigationController popToRootViewControllerAnimated:YES];
     }else{
         [self performSegueWithIdentifier:@"showLogin" sender:self];
     }
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -52,7 +53,9 @@
     [tracker set:kGAIScreenName value:@"Inbox"];
     [tracker send:[[GAIDictionaryBuilder createAppView] build]];
     
-    [self.navigationController.navigationBar setHidden:NO];
+  //  [self.navigationController.navigationBar setHidden:NO];
+    
+    self.navigationController.navigationBarHidden = false;
     
     if (self.currentUser != nil) {
         PFQuery *query = [PFQuery queryWithClassName:@"Messages"];
